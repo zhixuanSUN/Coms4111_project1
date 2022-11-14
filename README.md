@@ -6,5 +6,5 @@ Author: Jinyi Zhang(jz3518), Zhixuan Sun(zs2572)
 
 PostgreSQL account: jz3518
 
-URL address of our web application: [http://35.237.109.152:8111/](http://35.227.73.1:8111)
+URL address of our web application: [http://35.227.73.1:8111](http://35.227.73.1:8111)
 
