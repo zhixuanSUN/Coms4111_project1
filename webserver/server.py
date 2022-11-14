@@ -5,9 +5,8 @@ from sqlalchemy.pool import NullPool
 from flask import Flask, request, render_template, g, redirect, Response,url_for,flash,jsonify
 import json
 
-#tmpl_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
-#app = Flask(__name__, template_folder=tmpl_dir)
-app = Flask(__name__)
+tmpl_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
+app = Flask(__name__, template_folder=tmpl_dir)
 
 DB_USER = "jz3518"
 DB_PASSWORD = "3214"
@@ -133,5 +132,27 @@ def add():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=8111)
+    import click
+
+    """
+    This function handles command line parameters.
+    Run the server using
+        python server.py
+    Show the help text using
+        python server.py --help
+    """
+
+    @click.command()
+    @click.option('--debug', is_flag=True)
+    @click.option('--threaded', is_flag=True)
+    @click.argument('HOST', default='0.0.0.0')
+    @click.argument('PORT', default=8111, type=int)
+    def run(debug, threaded, host, port):
+
+        HOST, PORT = host, port
+        print("running on %s:%d" % (HOST, PORT))
+        app.run(host=HOST, port=PORT, debug=debug, threaded=threaded)
+
+
+    run()
 
