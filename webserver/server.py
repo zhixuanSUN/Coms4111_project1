@@ -1,4 +1,12 @@
-
+"""
+Columbia W4111 Intro to databases
+Example webserver
+To run locally
+    python server.py
+Go to http://localhost:8111 in your browser
+A debugger such as "pdb" may be helpful for debugging.
+Read about it online.
+"""
 import os
 from sqlalchemy import *
 from sqlalchemy.pool import NullPool
@@ -149,7 +157,7 @@ if __name__ == "__main__":
     """
 
     HOST, PORT = host, port
-    #print "running on %s:%d" % (HOST, PORT)
+    print "running on %s:%d" % (HOST, PORT)
     app.run(host=HOST, port=PORT, debug=debug, threaded=threaded)
 
 
