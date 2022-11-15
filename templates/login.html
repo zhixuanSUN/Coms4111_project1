@@ -1,0 +1,37 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <title>login</title>#}
+{#</head>#}
+{#<body>#}
+{#    <h1>Please log in</h1>#}
+{#    <a href="{{url_for('register')}}">Don't have an account?sign up</a>>#}
+{#    <form action="/"method="POST">#}
+{#        <label>username</label>#}
+{#        <input type="text" name="username"><br>#}
+{#        <label>password</label>#}
+{#        <input type="text" name="pwd"><br>#}
+{#        <input type="submit" value="submit">#}
+{#        {{ msg }}#}
+{#    </form>#}
+{#</body>#}
+{#</html>#}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+<h1>Welcome to the World Best Environment Server!</h1>
+    <form action="/login" method="POST">
+        Username：<input type="text" name="username">
+        Password:<input type="text" name="pwd">
+        <input type="submit" value="Login">
+        {{ msg }}
+    </form>
+<h4>Username:1 Password:AA</h4>
+<p><a href="/signup">Signup</a></p>
+</body>
+</html>
