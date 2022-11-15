@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+</head>
+<body>
+<h1>{{ name }}</h1>
+{% import "table.html" as T %}
+{{ T.make_table(tophat) }}
+<p><a href="/Back">Back</a></p>
+<p><a href="/takeevent">Take an event</a></p>
+
+</body>
+</html>

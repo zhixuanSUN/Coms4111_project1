@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>donation</title>
+</head>
+<body>
+<form method="POST" action="/add4">
+    <p><h3>Donation:</h3>> <h4>donation_id</h4>><input type="text" name="donation_id"><h4>amount</h4>><input type="text" name="amount"><h4>time</h4>><input type="text" name="time">
+    <input type="submit" value="donate"></p>
+</form>
+
+<h1>{{Name}}</h1>
+{% import "table.html" as T %}
+{{ T.make_table(tophat) }}
+<p><a href="/Back">Back</a></p>
+
+
+
+</body>
+</html>
